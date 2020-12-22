@@ -1,4 +1,4 @@
-const userUrl = "http://localhost:3000/users/5"
+const userUrl = "http://localhost:3000/users/1"
 
 export const fetchUser = () => {
     // console.log("fetching user")

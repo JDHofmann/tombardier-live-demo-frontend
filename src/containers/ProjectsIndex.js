@@ -25,7 +25,6 @@ export default class ProjectsIndex extends React.Component{
             user_id: this.props.user.id
         }
         this.props.createProject(newProjObj)
-        // this.props.history.push(`${this.props.projects[this.props.projects.length -1].project_id}`)
     }
 
     render(){

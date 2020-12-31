@@ -1,6 +1,5 @@
 import React from 'react'
 import ProjectImageForm from './ProjectImageForm';
-// import ProjectImages from './ProjectImages';
 
 class NewProjectImage extends React.Component {
     state = {

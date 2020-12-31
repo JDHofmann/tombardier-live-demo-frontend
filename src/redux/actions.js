@@ -1,10 +1,8 @@
-// const baseUrl = "http://localhost:3000/"
 
 // const userUrl = "http://localhost:3000/users/1"
 const baseUrl = "https://tranquil-wildwood-35160.herokuapp.com/"
 
 export const fetchUser = () => {
-    // console.log("fetching user")
     return (dispatch) => {
         fetch(`${baseUrl}users/1`)
         .then(resp => resp.json())
@@ -67,7 +65,6 @@ export const fetchCurrentUser = (token) => {
 
 export const editAccountInfo = (patchObj) => {
     const token = localStorage.getItem("token")
-    // console.log(patchObj)
     return (dispatch) => {
         fetch(`${baseUrl}users/1`, {
             method: "PATCH",
@@ -85,8 +82,6 @@ export const editAccountInfo = (patchObj) => {
 
 export const editSiteInfo = (patchObj) => {
     const token = localStorage.getItem("token")
-    // console.log(patchObj)
-    // console.log(userUrl)
     return (dispatch) => {
         fetch(`${baseUrl}users/1`, {
             method: "PATCH",

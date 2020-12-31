@@ -3,7 +3,6 @@ import { combineReducers } from "redux"
 const defaultState = {
     user: null,
     currentUser: null
-    // us
 }
 
 const userReducer = (

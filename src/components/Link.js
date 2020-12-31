@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { editLinkInfo, createUserLink, deleteUserLink, editProjectLink, deleteProjectLink } from '../redux/actions'
 import LocalEditBtn from './LocalEditBtn'
-// import LocalDeleteBtn from './LocalDeleteBtn';
 import LinkForm from './LinkForm';
 
 
@@ -70,10 +69,7 @@ class Link extends React.Component{
                     <a
                         className="grid-1-2 link-hover content-row"
                         href={this.props.link.link_url}
-                    >{this.props.link.link_text}</a>  
-                    {/* <LocalDeleteBtn 
-                        handleDelete={this.handleDelete}
-                    /> */}
+                    >{this.props.link.link_text}</a>
                     <LocalEditBtn 
                         editMode={this.state.editMode}
                         toggleEditMode={this.toggleEditMode}

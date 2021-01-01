@@ -1,13 +1,13 @@
 import React from 'react'
 import LocalEditBtn from '../components/LocalEditBtn'
 import ProjectImageForm from './ProjectImageForm';
-
+import { baseUrl } from '../redux/actions'
 
 
 class ProjectImages extends React.Component {
     state = {
         image: null,
-        tempImage: `https://tranquil-wildwood-35160.herokuapp.com${this.props.image.image}`,
+        tempImage: `${baseUrl}${this.props.image.image}`,
         editMode: false
     }
 
@@ -79,7 +79,7 @@ class ProjectImages extends React.Component {
                     <img
                         className="pj-image grid-1-4"
                         alt="" 
-                        src={`https://tranquil-wildwood-35160.herokuapp.com${this.props.image.image}`}
+                        src={`${baseUrl}${this.props.image.image}`}
                     ></img>
                     <LocalEditBtn 
                     editMode={this.state.editMode}
@@ -87,9 +87,6 @@ class ProjectImages extends React.Component {
                     />
                 </div>
                  }
-                {/* <LocalDeleteBtn 
-                    handleDelete={this.handleDelete}
-                /> */}
             </div>
         )
     }

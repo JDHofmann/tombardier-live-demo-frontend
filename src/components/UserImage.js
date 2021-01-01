@@ -2,6 +2,7 @@ import React from 'react'
 import LocalEditBtn from './LocalEditBtn'
 import { connect } from 'react-redux';
 import { newUserImage } from '../redux/actions'
+import { baseUrl } from '../redux/actions'
 
 
 class UserImage extends React.Component{
@@ -82,7 +83,7 @@ class UserImage extends React.Component{
             <img
                 className="user-image grid-1-4"
                 alt="" 
-                src={`http://localhost:3000/${this.props.image}`}></img>
+                src={`${baseUrl}${this.props.image}`}></img>
             <LocalEditBtn 
                 editMode={this.state.editMode}
                 toggleEditMode={this.toggleEditMode}

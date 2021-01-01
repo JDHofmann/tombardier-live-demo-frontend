@@ -4,7 +4,7 @@ const baseUrl = "https://tranquil-wildwood-35160.herokuapp.com/"
 
 export const fetchUser = () => {
     return (dispatch) => {
-        fetch(`${baseUrl}users/1`)
+        fetch(`${baseUrl}users/3`)
         .then(resp => resp.json())
         .then(userData => dispatch({
             type: 'LOAD_USER',
@@ -66,7 +66,7 @@ export const fetchCurrentUser = (token) => {
 export const editAccountInfo = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}users/1`, {
+        fetch(`${baseUrl}users/3`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -83,7 +83,7 @@ export const editAccountInfo = (patchObj) => {
 export const editSiteInfo = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}users/1`, {
+        fetch(`${baseUrl}users/3`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",

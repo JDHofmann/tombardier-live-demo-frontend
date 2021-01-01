@@ -7,7 +7,7 @@ import ProjectImageForm from './ProjectImageForm';
 class ProjectImages extends React.Component {
     state = {
         image: null,
-        tempImage: `http://localhost:3000/${this.props.image.image}`,
+        tempImage: `https://tranquil-wildwood-35160.herokuapp.com${this.props.image.image}`,
         editMode: false
     }
 
@@ -79,7 +79,7 @@ class ProjectImages extends React.Component {
                     <img
                         className="pj-image grid-1-4"
                         alt="" 
-                        src={`http://localhost:3000/${this.props.image.image}`}
+                        src={`https://tranquil-wildwood-35160.herokuapp.com${this.props.image.image}`}
                     ></img>
                     <LocalEditBtn 
                     editMode={this.state.editMode}

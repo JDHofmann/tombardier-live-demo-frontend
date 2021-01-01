@@ -12,7 +12,7 @@ object-fit: cover;
 margin: 2.5vh 0;
 border-radius: 10px;
 justify-self: right;
-box-shadow: 1px 1px 6px #c0c0c0;
+box-shadow: 0 0 6px #c0c0c0;
 }
 
 .pl-title {

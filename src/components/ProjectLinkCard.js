@@ -14,7 +14,7 @@ const ProjectLinkCard = (props) => {
                 <img 
                     className="pl-preview"
                     alt=""
-                    src={`http://localhost:3000/${props.project.images[0].image}`}></img>
+                    src={`https://tranquil-wildwood-35160.herokuapp.com${props.project.images[0].image}`}></img>
                 : null
                 }
             </div>

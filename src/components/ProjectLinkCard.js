@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../css/ProjectLinkCard.css'
+import { baseUrl } from '../redux/actions'
+
 
 const ProjectLinkCard = (props) => {
     return(
@@ -14,7 +16,7 @@ const ProjectLinkCard = (props) => {
                 <img 
                     className="pl-preview"
                     alt=""
-                    src={`https://tranquil-wildwood-35160.herokuapp.com${props.project.images[0].image}`}></img>
+                    src={`${baseUrl}${props.project.images[0].image}`}></img>
                 : null
                 }
             </div>

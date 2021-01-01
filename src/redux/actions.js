@@ -1,10 +1,10 @@
 
-// const userUrl = "http://localhost:3000/users/1"
-const baseUrl = "https://tranquil-wildwood-35160.herokuapp.com/"
+const userId = 3
+export const baseUrl = "https://tranquil-wildwood-35160.herokuapp.com"
 
 export const fetchUser = () => {
     return (dispatch) => {
-        fetch(`${baseUrl}users/3`)
+        fetch(`${baseUrl}/users/${userId}`)
         .then(resp => resp.json())
         .then(userData => dispatch({
             type: 'LOAD_USER',
@@ -15,7 +15,7 @@ export const fetchUser = () => {
 
 export const submitLogin = (loginObj) => {
     return (dispatch) => {
-        fetch(`${baseUrl}login`, {
+        fetch(`${baseUrl}/login`, {
             method: "POST",
             headers: {
                 "content-type":"application/json",
@@ -51,7 +51,7 @@ export const handleLogout = () => {
 
 export const fetchCurrentUser = (token) => {
     return (dispatch) => {
-        fetch(`${baseUrl}profile`,{
+        fetch(`${baseUrl}/profile`,{
             method: "GET",
             headers: { Authorization: `Bearer ${token}`}
         })
@@ -66,7 +66,7 @@ export const fetchCurrentUser = (token) => {
 export const editAccountInfo = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}users/3`, {
+        fetch(`${baseUrl}/users/${userId}`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -83,7 +83,7 @@ export const editAccountInfo = (patchObj) => {
 export const editSiteInfo = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}users/3`, {
+        fetch(`${baseUrl}/users/${userId}`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -100,7 +100,7 @@ export const editSiteInfo = (patchObj) => {
 export const editLinkInfo = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}${patchObj.id}`, {
+        fetch(`${baseUrl}/${patchObj.id}`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -117,7 +117,7 @@ export const editLinkInfo = (patchObj) => {
 export const deleteUserLink = (id) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}${id}`, {
+        fetch(`${baseUrl}/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -131,7 +131,7 @@ export const deleteUserLink = (id) => {
 export const createUserLink = (newObj, userId) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}user_links`, {
+        fetch(`${baseUrl}/user_links`, {
             method: "POST",
             headers: {
                 "content-type":"application/json",
@@ -156,7 +156,7 @@ export const newUserImage = (imageformData) => {
             },
             body: imageformData
         }
-        fetch(`${baseUrl}users/1`, options)
+        fetch(`${baseUrl}/users/${userId}`, options)
         .then(resp => resp.json())
         .then(useless => dispatch(fetchUser()))
     }
@@ -165,7 +165,7 @@ export const newUserImage = (imageformData) => {
 export const createProject = (newProjObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}projects`, {
+        fetch(`${baseUrl}/projects`, {
             method: "POST",
             headers: {
                 "content-type":"application/json",
@@ -182,7 +182,7 @@ export const createProject = (newProjObj) => {
 export const updateProject = (patchObj) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}projects/${patchObj.id}`, {
+        fetch(`${baseUrl}/projects/${patchObj.id}`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -199,7 +199,7 @@ export const updateProject = (patchObj) => {
 export const deleteProject = (id) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}projects/${id}`, {
+        fetch(`${baseUrl}/projects/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -220,7 +220,7 @@ export const newProjectImage = (newImage, projectImageId) => {
             },
             body: newImage
         }
-        fetch(`${baseUrl}project_images/${projectImageId}`, options)
+        fetch(`${baseUrl}/project_images/${projectImageId}`, options)
         .then(resp => resp.json())
         .then(data => dispatch(fetchUser()))
     }
@@ -236,7 +236,7 @@ export const brandnewProjectImage = (newImage) => {
             },
             body: newImage
         }
-        fetch(`${baseUrl}project_images`, options)
+        fetch(`${baseUrl}/project_images`, options)
         .then(resp => resp.json())
         .then(data => dispatch(fetchUser()))
     }
@@ -245,7 +245,7 @@ export const brandnewProjectImage = (newImage) => {
 export const deleteProjectImage = (id) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
-        fetch(`${baseUrl}project_images/${id}`, {
+        fetch(`${baseUrl}/project_images/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -260,7 +260,7 @@ export const createProjectLink = (newObj, projectId) => {
     const token = localStorage.getItem("token")
     return (dispatch) => {
         console.log(newObj, projectId)
-        fetch(`${baseUrl}project_links`, {
+        fetch(`${baseUrl}/project_links`, {
             method: "POST",
             headers: {
                 "content-type":"application/json",
@@ -277,7 +277,7 @@ export const createProjectLink = (newObj, projectId) => {
 export const editProjectLink = (patchObj) => {
     return (dispatch) => {
         const token = localStorage.getItem("token")
-        fetch(`${baseUrl}project_links/${patchObj.id}`, {
+        fetch(`${baseUrl}/project_links/${patchObj.id}`, {
             method: "PATCH",
             headers: {
                 "content-type":"application/json",
@@ -294,7 +294,7 @@ export const editProjectLink = (patchObj) => {
 export const deleteProjectLink = (id) => {
     return (dispatch) => {
         const token = localStorage.getItem("token")
-        fetch(`${baseUrl}project_links/${id}`, {
+        fetch(`${baseUrl}/project_links/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`

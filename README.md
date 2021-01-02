@@ -1,56 +1,45 @@
 # Tombardier Frontend
 
-Tombardier - Portfolio Building Made Simple
+<br>
 
-A browser based portfolio builder for developers to quickly build and deploy a personal site
+### *Portfolio Building Made Simple*
 
+---
 
-Built with a Ruby on Rails API backend, and a React/Redux front-end (this file) for Flatiron School Software Engineering Program
+<br>
 
+Tombardier is a browser based portfolio builder for developers to quickly build and deploy a personal site
 
-## Installation
+Built with a Ruby on Rails API backend, and a React/Redux front-end(this file) for Flatiron School Software Engineering Program
 
-Once you fork and clone this repo
+Check out the **[Live Demo](https://tombardier.netlify.app/)** to try it out.
 
-Simply run npm install to install bestbey's frontend.
+<br>
 
-```bash
-npm install
-```
+---
+---
 
-# Image Storage
+## Getting Started
 
-If you'd like to configure Tombardier with your own image storage, ensure you update all the files below:
+<br>
 
-once you set up your cloud storage service:
-    - go to config/storage.yml 
-        - add your service underneath the local sections
-        - namespace all your details under a title for the serivice
-    - comment out config/environments/development
-        line 29:
-              config.active_storage.service = :local
-        - then add your servie title from config/storage.yml
-    - comment out config/environments/production
-        line 33:
-              config.active_storage.service = :local
-        - then add your servie title from config/storage.yml
+Fork and clone this repo
 
-# Getting Started with Tombardier Frontend
+`npm install`
+
+<br>
+
+---
+
+<br>
+
+## Getting Started with Tombardier Frontend
+
+<br>
 
 Once your Rails server is running
 
 Start up your react app and enjoy
 
-```bash
-npm start
-```
+`npm start`
 
-
-<!-- npm install:
-    - redux
-    - redux-thunk
-    - react-redux
-    - activestorage
-    - react-router-dom
-
-## Usage -->

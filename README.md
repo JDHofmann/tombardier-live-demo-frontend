@@ -98,3 +98,32 @@ That's it, start up React and make sure that works then we can deploy our fronte
 
 <br>
 
+If you don't have a Netlify account, your can set one up [here](https://www.netlify.com/).
+
+<br>
+
+This part is easy. On your Netlify team overview page page, click the **New Site From Git** button. 
+
+Find your Github repo and deploy your site.
+
+<br>
+
+If everything works, *Congrats!* you've got a new portfolio site!
+
+<br>
+
+If your build failed, comb through this readme again and double check your files, or just write me a lengthy email and describe where my explanation went wrong.
+
+<br>
+---
+---
+
+<br>
+
+## Additionally 
+
+<br>
+
+You can easily add a domain to your netlify site, once it's already running.
+
+Good Luck!

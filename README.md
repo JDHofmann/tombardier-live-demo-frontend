@@ -16,6 +16,11 @@ Check out the **[Live Demo](https://tombardier.netlify.app/)** to try it out.
 
 <br>
 
+
+**This repo is built to run on it's companion [backend]() so I recommend setting that up first.**
+
+<br>
+
 ---
 ---
 
@@ -23,7 +28,8 @@ Check out the **[Live Demo](https://tombardier.netlify.app/)** to try it out.
 
 <br>
 
-Fork and clone this repo
+
+Fork and clone this repo, and run
 
 `npm install`
 
@@ -33,13 +39,18 @@ Fork and clone this repo
 
 <br>
 
-## Getting Started with Tombardier Frontend
+## Running Locally
 
 <br>
 
-Once your Rails server is running
+At this point you should have your backend up and running locally
+If your Rails server is working fine, the first key value pair should be **id: 1**
 
-Start up your react app and enjoy
+If the id is different from that, possibly from reseeding the file a few times, copy the id number and open ***actions.js*** inside *src/redux* and change **line 1** to the new id number
 
+`const userId = *newIdeaNumberHere*`
+<br>
+
+<br>
 `npm start`
 

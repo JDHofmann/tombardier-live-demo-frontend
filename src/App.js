@@ -10,9 +10,14 @@ import About from './containers/About';
 import { fetchUser, editAccountInfo, editSiteInfo, createProject, submitLogin, fetchCurrentUser, handleLogout } from './redux/actions'
 import Login from './components/Login';
 import Admin from './components/Admin'
+import InfoModal from './components/InfoModal';
 
 
 class App extends React.Component{
+
+  state = {
+    infoModal: true
+  }
 
   componentDidMount(){
     this.props.fetchUser()
@@ -23,6 +28,18 @@ class App extends React.Component{
     else {
       console.log("no token")
     }
+  }
+
+  renderInfoModal = () => {
+    return this.state.infoModal && !this.props.currentUser ? 
+    <InfoModal closeInfoModal={this.closeInfoModal}/>
+    : null
+  }
+
+  closeInfoModal = () => {
+    this.setState({
+      infoModal: false
+    })
   }
 
   renderTitle = () => {
@@ -117,6 +134,8 @@ class App extends React.Component{
             currentUser={this.props.currentUser}
             handleLogout={this.props.handleLogout}
         />
+            {this.renderInfoModal()}
+
         </>
     );
   }

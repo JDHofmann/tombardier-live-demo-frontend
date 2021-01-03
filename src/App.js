@@ -10,7 +10,7 @@ import About from './containers/About';
 import { fetchUser, editAccountInfo, editSiteInfo, createProject, submitLogin, fetchCurrentUser, handleLogout } from './redux/actions'
 import Login from './components/Login';
 import Admin from './components/Admin'
-import { InfoModal } from './components/InfoModal';
+import InfoModal from './components/InfoModal';
 
 
 class App extends React.Component{

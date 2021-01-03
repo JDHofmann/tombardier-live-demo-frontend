@@ -13,7 +13,6 @@ export default class InfoModal extends React.Component{
                 this.props.closeInfoModal()
             case 9:
                 e.preventDefault()
-                // console.log(e)
             default: break
         }
     }

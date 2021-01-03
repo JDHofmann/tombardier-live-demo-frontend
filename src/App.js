@@ -31,8 +31,7 @@ class App extends React.Component{
   }
 
   renderInfoModal = () => {
-    return this.state.infoModal ? 
-    // console.log("modal here") 
+    return this.state.infoModal && !this.props.currentUser ? 
     <InfoModal closeInfoModal={this.closeInfoModal}/>
     : null
   }

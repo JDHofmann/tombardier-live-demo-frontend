@@ -33,8 +33,14 @@ class App extends React.Component{
   renderInfoModal = () => {
     return this.state.infoModal ? 
     // console.log("modal here") 
-    <InfoModal />
+    <InfoModal closeInfoModal={this.closeInfoModal}/>
     : null
+  }
+
+  closeInfoModal = () => {
+    this.setState({
+      infoModal: false
+    })
   }
 
   renderTitle = () => {

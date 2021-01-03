@@ -11,9 +11,11 @@ export default class InfoModal extends React.Component{
         switch(e.keyCode){
             case 27:
                 this.props.closeInfoModal()
+                break
             case 9:
                 e.preventDefault()
-            default: break
+                break
+            default: return
         }
     }
     
